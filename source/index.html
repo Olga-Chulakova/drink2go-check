@@ -1,17 +1,180 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
-    <main>
-      <h1>Страница для старта</h1>
-    </main>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go - Интернет-магазин кофейных напитков</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="#" type="font/woff2" as="font">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body class="page__body">
+  <header class="main__header">
+    <nav class="main__nav main__nav--closed">
+      <div class="main-nav__container container">
+        <a class="main-header__logo" href="index.html" aria-label="Логотип Drink2Go">
+          <picture>
+            <!-- <source media="(min-width: 1440px)" srcset="" width="70" height="59" type="image/svg+xml">
+            <source media="(min-width: 768px)" srcset="" width="60" height="50" type="image/svg+xml"> -->
+            <img class="main-header__logo-picture" src="#" width="32" height="36" alt="Логотипа сайта">
+          </picture>
+        </a>
+        <div class="main-nav__user user-list">
+          <a class="user-list__login" href="#">Войти</a>
+          <a class="user-list__basket" href="#">Корзина</a>
+        </div>
+        <button class="main-nav__toggle main-nav__toggle--close" type="button" aria-label="Откройте меню"></button>
+      </div>
+      <div class="main-nav__wrapper main-nav__wrapper--close">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="404.html">Каталог</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="404.html">Доставка</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="404.html">О нас</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="promo">
+      <div class="promo__wrapper container">
+        <span class="promo__badge badge">Новинка!</span>
+        <h1 class="promo__title">Декаф Флэт Уайт</h1>
+        <p class="promo__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+        <span class="promo__price-discount price">295₽</span>
+        <span class="promo__price price">225₽</span>
+        <button class="promo__button button" type="button">Заказать</button>
+      </div>
+    </section>
+  </header>
+  <main class="main-container">
+    <section class="features container">
+      <span class="features__badge badge">Преимущества</span>
+      <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
+      <ul class="features__list">
+        <li class="features__item features__item--speed">
+          <h3 class="features__item-title">Скорость</h3>
+          <p class="features__text">Готовый напиток всегда под рукой — просто открой банку</p>
+        </li>
+        <li class="features__item features__item--fit">
+          <h3 class="features__item-title">Удобство</h3>
+          <p class="features__text">Легко помещается и в карман, и в маленькую сумочку</p>
+        </li>
+        <li class="features__item features__item--energy">
+          <h3 class="features__item-title">Бодрость</h3>
+          <p class="features__text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+        </li>
+        <li class="features__item features__item--eco">
+          <h3 class="features__item-title">Экологичность</h3>
+          <p class="features__text">Вся упаковка сделана из перерабатываемых материалов</p>
+        </li>
+      </ul>
+    </section>
+    <section class="catalog container">
+      <span class="catalog__badge badge">Каталог</span>
+      <h2 class="catalog__title">Каталог кофейных напитков</h2>
+      <form class="catalog-filter" action="https://echo.htmlacademy.ru/courses" method="post">
+        <fieldset class="filter-group filter-group__price">
+          <legend class="filter-group__title">Цена</legend>
+          <div class="catalog__range">
+            <label for="price"></label>
+            <input type="range" id="price" name="price" min="0" max="900" step="1">
+          </div>
+        </fieldset>
+        <fieldset class="filter-group filter-group__milk">
+          <legend class="filter-group__title">Наличие молока</legend>
+          <ul class="filter-group__list">
+            <li class="filter-group__item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="radio" name="milk" value="Неважно" checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Неважно</span>
+              </label>
+            </li>
+            <li class="filter-group__item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="radio" name="milk" value="Только животное">
+                <span class="control-mark"></span>
+                <span class="control-label">Только животное</span>
+              </label>
+            </li>
+            <li class="filter-group__item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="radio" name="milk" value="Только растительное">
+                <span class="control-mark"></span>
+                <span class="control-label">Только растительное</span>
+              </label>
+            </li>
+            <li class="filter-group__item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="radio" name="milk" value="Без молока">
+                <span class="control-mark"></span>
+                <span class="control-label">Без молока</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-group filter-group__country">
+          <legend class="filter-group__title">Страна произрастания</legend>
+          <ul class="filter-group__list">
+            <li class="filter-group__item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="checkbox" name="Бразилия" checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Бразилия</span>
+              </label>
+            </li>
+            <li class="filter-group__item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="checkbox" name="Эфиопия">
+                <span class="control-mark"></span>
+                <span class="control-label">Эфиопия</span>
+              </label>
+            </li>
+            <li class="filter-group__item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="checkbox" name="Колумбия">
+                <span class="control-mark"></span>
+                <span class="control-label">Колумбия</span>
+              </label>
+            </li>
+            <li class="filter-group__item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="checkbox" name="Коста-Рика">
+                <span class="control-mark"></span>
+                <span class="control-label">Коста-Рика</span>
+              </label>
+            </li>
+            <li class="filter-group__item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="checkbox" name="Перу">
+                <span class="control-mark"></span>
+                <span class="control-label">Перу</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="button-container">
+          <button class="button-show" type="submit">Применить</button>
+          <button class="button-reset" type="reset">Сбросить</button>
+        </div>
+      </form>
+    </section>
+    <section class="products container">
+      <h2 class="visually-hidden">Каталог</h2>
+      <select class="select-control" name="sort" aria-label="Сортировка">
+        <option value="cheap">По умолчанию</option>
+      </select>
+    </section>
+  </main>
+</body>
+
 </html>
