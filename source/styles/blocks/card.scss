@@ -1,0 +1,81 @@
+.card__list {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    gap: 30px;
+    margin-bottom: 70px;
+    flex-direction: row;
+  }
+}
+
+.card__item {
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+}
+
+.card__container {
+  padding: 0 20px 20px;
+}
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-family: $montserrat;
+  font-size: $font-size-18;
+  line-height: 32px;
+  font-weight: 700;
+  color: $base-color-text;
+  text-align: left;
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-24;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+}
+
+.card__text {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: $montserrat;
+  font-size: $font-size-14;
+  line-height: 20px;
+  font-weight: 400;
+  color: $base-color-text;
+  text-align: left;
+}
+
+.card__pay-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__button {
+  font-size: $font-size-14;
+  line-height: 20px;
+  text-transform: unset;
+  width: 141px;
+  padding: 8px 20px 8px 46px;
+  background-image: url("../../icons/union-card.svg");
+  background-size: 20px 16px;
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+}

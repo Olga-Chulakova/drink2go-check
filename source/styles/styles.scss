@@ -1,7 +1,35 @@
 /* GLOBAL */
 @import "./common/variables.scss";
-@import "./common/global.scss";
+@import "./common/mixins.scss";
 @import "./common/fonts.scss";
+@import "./common/global.scss";
+@import "./common/visually-hidden.scss";
+@import "./common/container.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/button.scss";
+@import "./blocks/page.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/user.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/badge.scss";
+@import "./blocks/price.scss";
+@import "./blocks/features.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/catalog-filter.scss";
+@import "./blocks/filter-group.scss";
+@import "./blocks/filter-slider.scss";
+// @import "./blocks/noUi-target.scss";
+@import "./blocks/control.scss";
+@import "./blocks/products.scss";
+@import "./blocks/card.scss";
+@import "./blocks/pagination.scss";
+@import "./blocks/map.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/social.scss";
+@import "./blocks/info.scss";
+@import "./blocks/navigation .scss";
+@import "./blocks/media.scss";
+@import "./blocks/contact.scss";
+@import "./blocks/copyright.scss";

@@ -1,0 +1,27 @@
+.navigation__title {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.navigation__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.navigation__item {
+  padding: 7px 0;
+}
+
+.navigation__link {
+  font-size: $font-size-12;
+  line-height: 16px;
+  font-weight: 500;
+  color: $base-color-text;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+}

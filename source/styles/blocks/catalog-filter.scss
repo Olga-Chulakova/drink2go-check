@@ -1,0 +1,6 @@
+.catalog-filter__wrapper {
+  @media (min-width: $tablet) {
+    display: flex;
+    gap: 30px;
+  }
+}

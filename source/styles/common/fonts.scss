@@ -1,1 +1,6 @@
 /* здесь подключите шрифты */
+$montserrat: "Montserrat", "Arial", sans-serif;
+$arial: "Arial", sans-serif;
+
+@include font-face("Montserrat", 400, normal, url("../../fonts/Montserrat-Regular.woff2") format("woff2"), url("../../fonts/Montserrat-Regular.woff") format("woff"));
+@include font-face("Montserrat", 700, normal, url("../../fonts/Montserrat-Bold.woff2") format("woff2"), url("../../fonts/Montserrat-Bold.woff") format("woff"));

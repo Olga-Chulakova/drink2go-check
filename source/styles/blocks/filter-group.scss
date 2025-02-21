@@ -1,0 +1,31 @@
+.filter-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-group__container {
+  margin-bottom: 30px;
+}
+
+.filter-group__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: $montserrat;
+  font-size: $font-size-16;
+  line-height: 24px;
+  font-weight: 600;
+  color: $base-color-text;
+  text-align: left;
+}
+
+.filter-group__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.filter-group__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+

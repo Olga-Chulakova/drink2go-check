@@ -1,0 +1,50 @@
+.user__list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+// .user-list__item {
+
+// }
+
+.user-list__link {
+  &::before {
+    content: "";
+    display: block;
+    background-color: #000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  &:hover::before,
+  &:focus-visible::before,
+  &:active::before {
+    background-color: #7859cf;
+  }
+}
+
+.user-list__link--user {
+  &::before {
+    content: "";
+    mask-image: url("../../icons/user-icon.svg");
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.user-list__link--union {
+  &::before {
+    content: "";
+    mask-image: url("../../icons/union-icon.svg");
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.user-list__link-text {
+  display: none;
+}

@@ -1,0 +1,31 @@
+.main-footer {
+  padding: 22px 0 30px;
+}
+
+.main-footer__wrapper-line {
+  border-bottom: 1px solid  #f0ebff;
+}
+
+.main-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.main-footer__nav {
+  padding: 20px 0 28px;
+}
+
+.main-footer__media {
+  padding: 20px 0 28px;
+}
+
+.main-footer__contact {
+  padding: 20px 0;
+}
+
+.main-footer__copyright {
+  padding-top: 20px;
+}

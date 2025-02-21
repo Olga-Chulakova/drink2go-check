@@ -1,0 +1,30 @@
+// .main-header {
+
+// }
+
+// .main-header--index {
+
+// }
+
+.main-header__logo-picture {
+  display: block;
+  margin-right: 88px;
+  outline: none;
+
+  @media (min-width: $tablet) {
+    margin-right: 67px;
+  }
+}
+
+.main-header__logo-text {
+  font-size: $font-size-12;
+  line-height: 16px;
+  font-weight: 400;
+  color: $base-color-text;
+  width: 126px;
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}

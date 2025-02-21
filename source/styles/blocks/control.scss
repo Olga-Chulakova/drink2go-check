@@ -1,0 +1,37 @@
+.control {
+  position: relative;
+  display: block;
+}
+
+.control__label {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $montserrat;
+  font-size: $font-size-16;
+  line-height: 24px;
+  font-weight: 400;
+  color: $base-color-text;
+  text-align: center;
+  padding-left: 34px;
+}
+
+.control__mark {
+  position: absolute;
+  background-color: #ffffff;
+  width: 24px;
+  height: 24px;
+  outline: 2px solid #bdbdbd;
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control__mark::before {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  background-color: #7859cf;
+  border-radius: 50%;
+  content: "";
+}
+

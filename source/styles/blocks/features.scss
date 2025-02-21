@@ -1,0 +1,149 @@
+.features {
+  padding: 50px 0 60px;
+
+  @media (min-width: $tablet) {
+    padding: 60px 0 100px;
+  }
+}
+
+.features__title {
+  margin-top: 4px;
+  margin-bottom: 36px;
+  font-family: $montserrat;
+  font-size: $font-size-24;
+  line-height: 36px;
+  font-weight: 700;
+  color: $base-color-text;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 60px;
+    font-size: $font-size-42;
+    line-height: 64px;
+  }
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 32px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    gap: 50px 30px;
+    padding: 0 10px;
+  }
+}
+
+.features__item {
+  position: relative;
+
+  @media (min-width: $tablet) {
+    width: 339px;
+  }
+}
+
+.features__wrapper {
+  @media (min-width: $tablet) {
+    padding-left: 72px;
+  }
+}
+
+.features__item--speed::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../icons/speed.svg");
+  background-repeat: no-repeat;
+  width: 52px;
+  height: 56px;
+  left: 114px;
+  top: 0;
+
+  @media (min-width: $tablet) {
+    left: 0;
+  }
+}
+
+.features__item--fit::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../icons/fit.svg");
+  background-repeat: no-repeat;
+  width: 52px;
+  height: 56px;
+  left: 114px;
+  top: 0;
+
+  @media (min-width: $tablet) {
+    left: 0;
+  }
+}
+
+.features__item--energy::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../icons/energy.svg");
+  background-repeat: no-repeat;
+  width: 52px;
+  height: 56px;
+  left: 114px;
+  top: 0;
+
+  @media (min-width: $tablet) {
+    left: 0;
+  }
+}
+
+.features__item--eco::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../icons/eco.svg");
+  background-repeat: no-repeat;
+  width: 52px;
+  height: 56px;
+  left: 114px;
+  top: 0;
+
+  @media (min-width: $tablet) {
+    left: 0;
+  }
+}
+
+.features__item-title {
+  margin-top: 66px;
+  margin-bottom: 4px;
+  font-family: $montserrat;
+  font-size: $font-size-18;
+  line-height: 32px;
+  font-weight: 700;
+  color: $base-color-text;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-24;
+    line-height: 36px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.features__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $montserrat;
+  font-size: $font-size-14;
+  line-height: 20px;
+  font-weight: 400;
+  color: $base-color-text;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-16;
+    line-height: 24px;
+    text-align: left;
+  }
+}
