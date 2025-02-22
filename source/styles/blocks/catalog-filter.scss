@@ -3,4 +3,8 @@
     display: flex;
     gap: 30px;
   }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+  }
 }

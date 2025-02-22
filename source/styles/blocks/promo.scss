@@ -6,10 +6,25 @@
     background-image: linear-gradient(rgba(243, 235, 225, 1) 640px, #ffffff 188px);
     padding: 60px 0 0;
   }
+
+  @media (min-width: $desktop) {
+    padding: 30px 0 70px;
+    background-color: #f3ebe1;
+    background-image: none;
+  }
+}
+
+.promo__image {
+  display: block;
 }
 
 .promo__wrapper {
   display: grid;
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 600px 1fr;
+    column-gap: 30px;
+  }
 }
 
 .promo__wrapper-image {
@@ -19,6 +34,11 @@
 .promo__wrapper-info {
   @media (min-width: $tablet) {
     grid-row: 1 / 2;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / 3;
+    padding-top: 160px;
   }
 }
 
@@ -38,6 +58,11 @@
     width: 608;
     margin: 4px auto 16px;
   }
+
+  @media (min-width: $desktop) {
+    text-align: left;
+    margin: 4px 0 16px;
+  }
 }
 
 .promo__text {
@@ -56,11 +81,14 @@
     width: 608;
     margin: 0 auto 20px;
   }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 40px;
+    text-align: left;
+  }
 }
 
 .promo__price-discount {
-  // margin-top: 0;
-  // margin-bottom: 20px;
   font-family: $montserrat;
   font-size: $font-size-16;
   line-height: 32px;
@@ -79,6 +107,11 @@
   @media (min-width: $tablet) {
     width: 265px;
     margin: 0 auto 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    padding: 0;
   }
 }
 

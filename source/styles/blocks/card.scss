@@ -12,26 +12,43 @@
     margin-bottom: 70px;
     flex-direction: row;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 60px;
+  }
 }
 
 .card__item {
   background-color: #ffffff;
   border-radius: 4px;
+
+  @media (min-width: $tablet) {
+    width: 349px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 317px;
+  }
 }
+
 
 .card__image {
   display: block;
-  margin: 0 auto;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 30px;
-    margin-top: 50px;
+    margin: 50px auto 30px;
   }
 }
 
 .card__container {
   padding: 0 20px 20px;
+
+
+  @media (min-width: $tablet) {
+    padding: 0 30px 30px;
+    box-sizing: border-box;
+  }
 }
 
 .card__title {

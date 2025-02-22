@@ -6,13 +6,16 @@
   margin: 0;
   list-style-type: none;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    justify-content: flex-end;
+  }
 }
 
 .pagination__button {
   min-width: 40px;
   height: 40px;
   border-radius: 4px;
-  font-family: $montserrat;
   font-size: $font-size-16;
   line-height: 24px;
   font-weight: 400;
@@ -42,6 +45,15 @@
     transform: rotate(90deg);
     margin: auto;
     background-color: #7859cf;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    width: 91px;
   }
 }
 
@@ -56,5 +68,27 @@
     transform: rotate(-90deg);
     margin: auto;
     background-color: #7859cf;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    width: 91px;
+  }
+}
+
+.pagination__button-text {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    padding: 8px 20px;
+    font-size: $font-size-16;
+    line-height: 24px;
+    font-weight: 400;
+    align-items: center;
   }
 }

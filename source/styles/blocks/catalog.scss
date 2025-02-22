@@ -5,6 +5,18 @@
   @media (min-width: $tablet) {
     padding: 80px 0 90px;
   }
+
+  @media (min-width: $desktop) {
+    padding: 100px 0 120px;
+  }
+}
+
+.catalog__wrapper {
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 318px 1012px;
+    column-gap: 30px;
+  }
 }
 
 .catalog__title {
@@ -20,6 +32,18 @@
   @media (min-width: $tablet) {
     font-size: $font-size-42;
     line-height: 64px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 40px;
+    grid-column: span 2;
+  }
+}
+
+.catalog__badge.badge {
+  @media (min-width: $desktop) {
+    text-align: center;
+    grid-column: span 2;
   }
 }
 

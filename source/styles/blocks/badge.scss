@@ -8,4 +8,9 @@
   text-align: center;
   display: inline-block;
   width: 100%;
+
+  @media (min-width: $desktop) {
+    text-align: left;
+  }
 }
+

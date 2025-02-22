@@ -3,8 +3,6 @@
   position: relative;
 
   @media (min-width: $tablet) {
-    // display: grid;
-    // grid-template-columns: 149px 1fr 180px;
     padding: 22px 0;
     width: 728px;
     margin-left: auto;
@@ -13,6 +11,7 @@
 
   @media (min-width: $desktop) {
     width: 1360px;
+    padding: 24px 0;
   }
 }
 
@@ -23,17 +22,31 @@
 .main-nav__container-wrapper {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop) {
+    justify-content: space-between;
+  }
 }
 
 .main-nav__container {
   display: flex;
   align-items: center;
+
+  @media (min-width: $desktop) {
+    gap: 20px;
+    justify-content: space-between;
+  }
 }
 
 .main-nav__user {
   @media (min-width: $tablet) {
     order: 1;
     margin-left: auto;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
   }
 }
 

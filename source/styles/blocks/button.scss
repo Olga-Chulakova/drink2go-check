@@ -15,14 +15,14 @@
   cursor: pointer;
 }
 
-.button__show {
+.catalog-button__show {
   @media (min-width: $tablet) {
     text-transform: capitalize;
     padding: 8px 20px;
   }
 }
 
-.button__reset {
+.catalog-button__reset {
   background-color: #ffffff;
   color: $bg-basic-violet;
 
