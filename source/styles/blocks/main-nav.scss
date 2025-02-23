@@ -3,7 +3,7 @@
   position: relative;
 
   @media (min-width: $tablet) {
-    padding: 22px 0;
+    padding: 0;
     width: 728px;
     margin-left: auto;
     margin-right: auto;
@@ -11,7 +11,7 @@
 
   @media (min-width: $desktop) {
     width: 1360px;
-    padding: 24px 0;
+    padding: 0;
   }
 }
 
@@ -59,6 +59,8 @@
 
   @media (min-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
 
@@ -71,7 +73,39 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    padding: 0 20px;
+    box-sizing: border-box;
+    width: 103px;
+    height: 80px;
+    padding: 32px 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  @media (min-width: $desktop) {
+    box-sizing: border-box;
+    width: 103px;
+    height: 80px;
+    padding: 32px 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+.main-nav__link--current {
+  &::after {
+    @media (min-width: $tablet) {
+      content: "";
+      background-color: #7859cf;
+      height: 2px;
+      position: absolute;
+      top: 78px;
+      left: 0;
+      right: 0;
+    }
   }
 }
 
