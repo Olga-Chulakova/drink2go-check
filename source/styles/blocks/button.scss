@@ -9,25 +9,57 @@
   padding: 8px;
   border: none;
   border-radius: 4px;
-  background-color: $bg-basic-violet;
+  background-color: $basic-violet;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $violet-lite;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $violet-dark;
+  }
+
+  &:disabled {
+    background-color: $base-gray;
+  }
 }
 
 .catalog-button__show {
   @media (min-width: $tablet) {
     text-transform: capitalize;
     padding: 8px 20px;
+    width: 137px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 149px;
   }
 }
 
 .catalog-button__reset {
   background-color: #ffffff;
-  color: $bg-basic-violet;
+  color: $basic-violet;
+
+  &:hover,
+  &:focus-visible,
+  &:active,
+  &:disabled {
+    color: #ffffff;
+    outline: none;
+  }
 
   @media (min-width: $tablet) {
     text-transform: capitalize;
     padding: 8px 20px;
+    width: 120px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 149px;
   }
 }

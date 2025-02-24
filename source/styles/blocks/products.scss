@@ -35,7 +35,7 @@
   font-size: $font-size-16;
   line-height: 24px;
   font-weight: 600;
-  color: $bg-basic-violet;
+  color: $basic-violet;
   background-color: #f8f8f8;
   appearance: none;
   padding: 4px 10px;
@@ -45,4 +45,14 @@
   background-repeat: no-repeat;
   background-position: right 10px center;
   outline: none;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $lilac;
+  }
+
+  &:active {
+    top: -50%;
+    left: -50%;
+  }
 }

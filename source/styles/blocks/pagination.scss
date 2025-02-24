@@ -13,26 +13,53 @@
 }
 
 .pagination__button {
-  min-width: 40px;
+  width: 40px;
   height: 40px;
   border-radius: 4px;
   font-size: $font-size-16;
   line-height: 24px;
   font-weight: 400;
   text-align: center;
-  color: #7859cf;
+  color: $basic-violet;
   background-color: #ffffff;
   border: none;
   cursor: pointer;
   padding: 8px;
   position: relative;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $violet-lite;
+    outline: none;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: $violet-dark;
+    color: #ffffff;
+  }
+
+  &:disabled {
+    background-color: $gray-lite;
+    color: #ffffff;
+  }
 }
+
 
 .pagination__button--current {
   background-color: #f8f8f8;
   font-weight: 600;
   color: $base-color-text;
 }
+
+// .pagination__button.pagination__button--current {
+//   &:hover,
+//   &:focus-visible,
+//   &:active {
+//     background-color: #f8f8f8;
+//     color: $base-color-text;
+//   }
+// }
 
 .pagination__button--back {
   &::before {
@@ -44,7 +71,7 @@
     mask-repeat: no-repeat;
     transform: rotate(90deg);
     margin: auto;
-    background-color: #7859cf;
+    background-color: $basic-violet;
 
     @media (min-width: $tablet) {
       content: none;
@@ -67,7 +94,7 @@
     mask-repeat: no-repeat;
     transform: rotate(-90deg);
     margin: auto;
-    background-color: #7859cf;
+    background-color: $basic-violet;
 
     @media (min-width: $tablet) {
       content: none;
@@ -77,6 +104,15 @@
   @media (min-width: $tablet) {
     padding: 0;
     width: 91px;
+  }
+}
+
+.pagination__button.pagination__button--back,
+.pagination__button.pagination__button--forward {
+  &:hover::before,
+  &:focus-visible::before,
+  &:active::before {
+    background-color: #ffffff;
   }
 }
 

@@ -10,12 +10,23 @@
 .social__item {
   display: flex;
   align-items: center;
-  padding: 10px;
 }
 
 .social__link {
+  text-decoration: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+
   &::before {
     content: "";
+    position: absolute;
     display: block;
     width: 20px;
     height: 20px;
@@ -27,7 +38,16 @@
   &:hover::before,
   &:focus-visible::before,
   &:active::before {
-    background-color: #7859cf;
+    background-color: $basic-violet;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $lilac;
+  }
+
+  &:active {
+    background-color: rgba(120, 89, 207, 0.25);
   }
 }
 

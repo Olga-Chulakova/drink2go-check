@@ -2,6 +2,14 @@
   margin: 0 0 30px;
   border: none;
   padding: 0;
+
+  @media (min-width: $tablet) {
+    width: 223px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 318px;
+  }
 }
 
 .filter-group__title {

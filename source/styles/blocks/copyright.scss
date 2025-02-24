@@ -36,7 +36,20 @@
 
   &:hover::after,
   &:focus-visible::after {
-    background-color: #9859cf;
+    background-color: $basic-violet;
+  }
+
+  &:active::after {
+    background-color: $violet-dark;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $basic-violet;
+  }
+
+  &:active {
+    color: $violet-dark;
   }
 }
 

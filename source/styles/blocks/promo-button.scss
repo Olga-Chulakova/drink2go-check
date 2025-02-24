@@ -1,0 +1,54 @@
+// .promo-button {
+//   background-color: #f3ebe1;
+//   border: none;
+//   cursor: pointer;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   padding: 0;
+//   margin: 0;
+//   position: relative;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     display: block;
+//     width: 20px;
+//     height: 656px;
+//     top: 0;
+//     left: 0;
+//     mask-image: url("../../icons/arrow-slider.svg");
+//     background-color: #7859cf;
+//     mask-size: 11px 20px;
+//     mask-repeat: no-repeat;
+//     mask-position: center;
+//   }
+// }
+
+// .promo-button--forward {
+//   &::before {
+//     transform: rotate(180deg);
+//   }
+// }
+
+.slider__button {
+  padding: 0;
+  margin: 0;
+  width: 20px;
+  height: 256px;
+  color: #7859cf;
+  background-color: #f3ebe1;
+  border: none;
+  cursor: pointer;
+  background-image: url("../../icons/arrow-slider.svg");
+  background-size: 11px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet) {
+    width: 80px;
+  }
+}
+
+.slider__button--forward {
+  transform: rotate(180deg);
+}
