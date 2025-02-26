@@ -11,12 +11,11 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon-svg.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-  <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="main-header main-header--index">
-    <nav class="main-nav main-nav--closed container">
+  <header class="main-header main-header--index" data-test="header">
+    <nav class=" main-nav main-nav--closed container">
       <div class="main-nav__container-wrapper">
         <div class="main-nav__container">
           <a class="main-header__logo" href="index.html" aria-label="Логотип Drink2Go">
@@ -42,7 +41,7 @@
             </li>
           </ul>
         </div>
-        <button class="main-nav__toggle main-nav__toggle--close" type="button" aria-label="Откройте меню"></button>
+        <button class="main-nav__toggle main-nav__toggle--close js-toggle-button" type="button" aria-label="Откройте меню"></button>
         <div class="main-nav__wrapper main-nav__wrapper--close">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -61,39 +60,85 @@
         </div>
       </div>
     </nav>
-    <section class="promo">
-      <div class="promo__slider-wrapper slider">
-        <div class="slider__controll">
-          <button class="slider__button slider__button--back" type="button" aria-label="Назад"></button>
-          <button class="slider__button slider__button--forward" type="button" aria-label="Назад"></button>
-        </div>
-      </div>
-      <div class="promo__wrapper container">
-        <div class="promo__wrapper-image">
-          <picture>
-            <source media="(min-width: 1440px)" type="image/webp" width="600" height="600" srcset="images/slider-1-desktop@1x.webp, images/slider-1-desktop@2x.webp 2x">
-            <source media="(min-width: 768px)" type="image/webp" width="476" height="476" srcset="images/slider-tablet@1x.webp, images/slider-tablet@2x.webp 2x">
-            <source type="image/webp" width="280" height="280" srcset="images/slider-mobile@1x.webp, images/slider-mobile@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="images/slider-1-desktop@1x.png 1x, images/slider-1-desktop@2x.png 2x" type="image/png" width="600" height="600">
-            <source media="(min-width: 768px)" srcset="images/slider-tablet@1x.png 1x, images/slider-tablet@2x.png 2x" type="image/png" width="476" height="476">
-            <img class="promo__image" src="images/slider-mobile@1x.png" srcset="images/slider-mobile@2x.png 2x" width="280" height="280" alt="Упаковка еды для котов со вкусом курицы">
-          </picture>
-        </div>
-        <div class="promo__wrapper-info">
-          <span class="promo__badge badge">Новинка!</span>
-          <h1 class="promo__title">Декаф Флэт Уайт</h1>
-          <p class="promo__text">Свежесваренный кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-          <div class="promo__container">
-            <span class="promo__price-discount">295₽</span>
-            <span class="promo__price price">225₽</span>
-            <button class="promo__button button" type="button">Заказать</button>
+    <section class="promo promo--bg1 promo--bg2 promo--bg3">
+      <ul class="promo__list">
+        <li class="promo__item promo-button">
+          <button class="promo-button__slider promo-button__slider--back" type="button" aria-label="Назад"></button>
+          <button class="promo-button__slider promo-button__slider--forward" type="button" aria-label="Вперед"></button>
+        </li>
+        <li class="promo__item promo__item--active">
+          <div class="promo__wrapper container">
+            <div class="promo__wrapper-image">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" width="600" height="600" srcset="images/slider-1-desktop@1x.webp, images/slider-1-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" type="image/webp" width="476" height="476" srcset="images/slider-tablet@1x.webp, images/slider-tablet@2x.webp 2x">
+                <source type="image/webp" width="280" height="280" srcset="images/slider-mobile@1x.webp, images/slider-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="images/slider-1-desktop@1x.png 1x, images/slider-1-desktop@2x.png 2x" type="image/png" width="600" height="600">
+                <source media="(min-width: 768px)" srcset="images/slider-tablet@1x.png 1x, images/slider-tablet@2x.png 2x" type="image/png" width="476" height="476">
+                <img class="promo__image" src="images/slider-mobile@1x.png" srcset="images/slider-mobile@2x.png 2x" width="280" height="280" alt="Банка кофе">
+              </picture>
+            </div>
+            <div class="promo__wrapper-info">
+              <span class="promo__badge badge">Новинка!</span>
+              <h1 class="promo__title">Декаф Флэт Уайт</h1>
+              <p class="promo__text">Свежесваренный кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <div class="promo__container">
+                <span class="promo__price-discount">295₽</span>
+                <span class="promo__price price">225₽</span>
+                <button class="promo__button button" type="button">Заказать</button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </li>
+        <li class="promo__item">
+          <div class="promo__wrapper container">
+            <div class="promo__wrapper-image">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" width="600" height="600" srcset="images/slider-2-desktop@1x.webp, images/slider-2-desktop@2x.webp 2x">
+                <source type="image/webp" width="600" height="600" srcset="images/slider-2-desktop@1x.webp, images/slider-2-desktop@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="images/slider-2-desktop@1x.png 1x, iimages/slider-2-desktop@2x.png 2x" type="image/png" width="600" height="600">
+                <img class="promo__image" src="images/slider-2-desktop@1x.png" srcset="images/slider-2-desktop@2x.png 2x" width="600" height="600" alt="Банка кофе">
+              </picture>
+            </div>
+            <div class="promo__wrapper-info">
+              <span class="promo__badge badge">Новинка!</span>
+              <h1 class="promo__title">Лавандовый Латте</h1>
+              <p class="promo__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+              <div class="promo__container">
+                <span class="promo__price-discount">285₽</span>
+                <span class="promo__price price">265₽</span>
+                <button class="promo__button button" type="button">Заказать</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="promo__item">
+          <div class="promo__wrapper container">
+            <div class="promo__wrapper-image">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" width="600" height="600" srcset="images/slider-3-desktop@1x.webp, images/slider-3-desktop@2x.webp 2x">
+                <source type="image/webp" width="600" height="600" srcset="images/slider-3-desktop@1x.webp, images/slider-3-desktop@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="images/slider-3-desktop@1x.png 1x, images/slider-3-desktop@2x.png 2x" type="image/png" width="600" height="600">
+                <img class="promo__image" src="images/slider-3-desktop@1x.png" srcset="images/slider-3-desktop@2x.png 2x" width="600" height="600" alt="Банка кофе">
+              </picture>
+            </div>
+            <div class="promo__wrapper-info">
+              <span class="promo__badge badge">Новинка!</span>
+              <h1 class="promo__title">Тройной Эспрессо</h1>
+              <p class="promo__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+              <div class="promo__container">
+                <span class="promo__price-discount">395₽</span>
+                <span class="promo__price price">375₽</span>
+                <button class="promo__button button" type="button">Заказать</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </section>
   </header>
   <main class="main-container">
-    <section class="features container">
+    <section class="features container" data-test="features">
       <span class="features__badge badge">Преимущества</span>
       <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
       <ul class="features__list">
@@ -123,7 +168,7 @@
         </li>
       </ul>
     </section>
-    <section class="catalog">
+    <section class="catalog" data-test="catalog">
       <div class="catalog__wrapper container">
         <span class="catalog__badge badge">Каталог</span>
         <h2 class="catalog__title">Каталог кофейных напитков</h2>
@@ -131,14 +176,14 @@
           <div class="catalog-filter__wrapper filter-group">
             <fieldset class="filter-group__container">
               <legend class="filter-group__title">Цена</legend>
-              <div class="filter-slider" id="range-slider"></div>
-              <div class="filter-slider__inputs">
-                <label class="filter-slider__label" for="q">
-                  <input class="filter-slider__input" type="number" min="0" max="900" placeholder="0" name="q" id="input-0">
+              <div class="filter-group__wrapper-slider filter-slider" id="range-slider"></div>
+              <div class="filter-group__wrapper-range range">
+                <label class="range__label" for="q">
+                  <input class="range__input" type="number" min="0" max="900" placeholder="0" name="q" id="input-0">
                 </label>
-                <span class="filter-slider__line"></span>
-                <label class="filter-slider__label" for="q">
-                  <input class="filter-slider__input" type="number" min="0" max="900" placeholder="500" name="q" id="input-1">
+                <span class="range__line"></span>
+                <label class="range__label" for="q">
+                  <input class="range__input" type="number" min="0" max="900" placeholder="500" name="q" id="input-1">
                 </label>
               </div>
             </fieldset>
@@ -363,7 +408,7 @@
         </div>
       </div>
     </section>
-    <section class="map">
+    <section class="map" data-test="map">
       <h2 class="visually-hidden">Карта</h2>
       <picture>
         <source media="(min-width: 1440px)" type="image/webp" width="1440" height="540" srcset="images/location-desktop@1x.webp, images/location-desktop@2x.webp 2x">
@@ -467,6 +512,8 @@
       </div>
     </div>
   </footer>
+  <script src="scripts/index.js" defer></script>
+  <script src="scripts/slider.js" defer></script>
   <script src="vendor/nouislider.min.js" defer></script>
   <script src="scripts/range-slider.js" defer></script>
 </body>

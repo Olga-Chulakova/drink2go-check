@@ -8,10 +8,38 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 30px 0 70px;
+    padding: 30px 0 84px;
     background-color: #f3ebe1;
     background-image: none;
+    transition: background-color 0.3s ease;
   }
+}
+
+.promo--bg1 {
+  background-color: #f3ebe1;
+}
+
+.promo--bg2 {
+  background-color: #eae6fc;
+}
+
+.promo--bg3 {
+  background-color: #e5e6e8;
+}
+
+.promo__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
+}
+
+.promo__item {
+  display: none;
+}
+
+.promo__item--active {
+  display: block;
 }
 
 .promo__slider-wrapper {
@@ -20,13 +48,17 @@
 
 .promo__image {
   display: block;
+
+  @media (min-width: $desktop) {
+    margin-left: 65px;
+  }
 }
 
 .promo__wrapper {
   display: grid;
 
   @media (min-width: $desktop) {
-    grid-template-columns: 600px 1fr;
+    grid-template-columns: auto 1fr;
     column-gap: 30px;
   }
 }
@@ -42,7 +74,15 @@
 
   @media (min-width: $desktop) {
     grid-column: 2 / 3;
-    padding-top: 160px;
+    padding-top: 150px;
+  }
+}
+
+.promo__badge {
+  margin-top: 10px;
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
   }
 }
 
@@ -82,7 +122,7 @@
   @media (min-width: $tablet) {
     font-size: $font-size-20;
     line-height: 32px;
-    width: 608;
+    width: 606px;
     margin: 0 auto 20px;
   }
 
@@ -109,7 +149,7 @@
   padding: 0 25px;
 
   @media (min-width: $tablet) {
-    width: 265px;
+    width: 230px;
     margin: 0 auto 20px;
   }
 

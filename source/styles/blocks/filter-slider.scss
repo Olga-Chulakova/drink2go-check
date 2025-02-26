@@ -1,86 +1,15 @@
-/* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
 
-/* Firefox */
 input[type="number"] {
   appearance: textfield;
 }
 
 .filter-slider {
   margin-bottom: 34px;
-}
-
-.filter-slider__inputs {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.filter-slider__label {
-  display: flex;
-  align-items: center;
-  width: 118px;
-  height: 40px;
-
-  @media (min-width: $tablet) {
-    width: 87px;
-  }
-
-  @media (min-width: $desktop) {
-    width: 134px;
-  }
-}
-
-.filter-slider__input {
-  width: 100%;
-  font-size: $font-size-16;
-  color: $base-gray;
-  margin: 0 auto;
-  border: 2px solid #9070ec;
-  border-radius: 4px;
-  background-color: #ffffff;
-  box-sizing: border-box;
-  padding: 8px 10px;
-  text-align: center;
-
-  &:focus,
-  &:focus-visible {
-    outline: none;
-    border: 2px solid $violet-dark;
-  }
-
-  &:disabled {
-    border: 2px solid $gray-lite;
-    color: $base-gray;
-
-    &::placeholder {
-      color: $base-gray; /* Цвет placeholder disabled */
-    }
-  }
-
-  // &:not(:placeholder-shown),
-  // &:focus { /* Добавляем &:focus, чтобы цвет менялся сразу при фокусе */
-  //   color: #333333;
-  // }
-}
-
-.filter-slider__input:not(:placeholder-shown) {
-  color: #333333;
-}
-
-.filter-slider__line {
-  content: "";
-  width: 8px;
-  height: 2px;
-  background-color: #bdbdbd;
-
-  @media (min-width: $desktop) {
-    width: 10px;
-  }
 }
 
 .noUi-connect {
@@ -117,63 +46,61 @@ input[type="number"] {
 }
 
 .noUi-handle:hover {
-  width: 24px;       /* Увеличиваем ширину */
-  height: 24px;      /* Увеличиваем высоту */
-  border-color: #9070ec; /* Меняем цвет рамки */
-  /* background-color: transparent;  Убираем заливку (если нужно) */
+  width: 24px;
+  height: 24px;
+  border-color: #9070ec;
 }
 
 .noUi-handle:hover::before {
-  content: "";           /* Обязательно для псевдоэлемента */
-  display: block;        /* Делаем псевдоэлемент блочным */
-  position: absolute;     /* Абсолютное позиционирование */
-  top: 50%;              /* Выравниваем по вертикали */
-  left: 50%;             /* Выравниваем по горизонтали */
-  transform: translate(-50%, -50%); /* Центрируем псевдоэлемент */
-  width: 16px;          /* Ширина внутреннего круга */
-  height: 16px;         /* Высота внутреннего круга */
-  border-radius: 50%;    /* Делаем круглым */
-  background-color: rgba(120, 89, 207, 0.25); /* Цвет внутреннего круга */
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(120, 89, 207, 0.25);
 }
 
 .noUi-handle:focus,
 .noUi-handle:focus-visible {
-  outline: none; /* Убираем стандартный outline */
+  outline: none;
   width: 24px;
   height: 24px;
   border-color: #9070ec;
 
   &::before {
-    content: "";           /* Обязательно для псевдоэлемента */
-    display: block;        /* Делаем псевдоэлемент блочным */
-    position: absolute;     /* Абсолютное позиционирование */
-    top: 50%;              /* Выравниваем по вертикали */
-    left: 50%;             /* Выравниваем по горизонтали */
-    transform: translate(-50%, -50%); /* Центрируем псевдоэлемент */
-    width: 16px;          /* Ширина внутреннего круга */
-    height: 16px;         /* Высота внутреннего круга */
-    border-radius: 50%;    /* Делаем круглым */
-    background-color: rgba(120, 89, 207, 0.25); /* Цвет внутреннего круга */
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(120, 89, 207, 0.25);
   }
 }
 
 .noUi-handle:active {
-  width: 24px;       /* Увеличиваем ширину */
-  height: 24px;      /* Увеличиваем высоту */
+  width: 24px;
+  height: 24px;
   border-color: $basic-violet;
 }
 
 .noUi-handle:active::before {
-  content: "";           /* Обязательно для псевдоэлемента */
-  display: block;        /* Делаем псевдоэлемент блочным */
-  position: absolute;     /* Абсолютное позиционирование */
-  top: 50%;              /* Выравниваем по вертикали */
-  left: 50%;             /* Выравниваем по горизонтали */
-  transform: translate(-50%, -50%); /* Центрируем псевдоэлемент */
-  width: 16px;          /* Ширина внутреннего круга */
-  height: 16px;         /* Высота внутреннего круга */
-  border-radius: 50%;    /* Делаем круглым */
-  background-color: $basic-violet; /* Цвет внутреннего круга */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $basic-violet;
 }
 
 .noUi-target[disabled] {
@@ -186,13 +113,13 @@ input[type="number"] {
   height: 24px;
   border-color: #bdbdbd;
   background-color: #f8f8f8;
-  border-radius: 50%; /* Делаем ручки круглыми */
-  cursor: not-allowed; /* Меняем курсор */
+  border-radius: 50%;
+  cursor: not-allowed;
 }
 
 .noUi-connect[disabled] {
   background-color: #bdbdbd;
-  height: 4px; /* Явно указываем высоту, чтобы она не сбрасывалась */
+  height: 4px;
 }
 
 .noUi-handle[disabled]:hover {
