@@ -1,0 +1,30 @@
+.slider-division {
+    display: none;
+    @media (min-width: $desktop) {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8;
+    }
+  }
+
+  .slider-division__button {
+    @media (min-width: $desktop) {
+        width: 62px;
+        height: 4px;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+    }
+  } 
+
+  .slider-division__button--active {
+    @media (min-width: $desktop) {
+        background-color: $basic-violet;
+    }
+  }

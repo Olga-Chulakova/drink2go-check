@@ -2,6 +2,7 @@ const promo = document.querySelector('.promo');
 const promoItems = document.querySelectorAll('.promo__item:not(.promo-button)');
 const buttonBack = document.querySelector('.promo-button__slider--back');
 const buttonForward = document.querySelector('.promo-button__slider--forward');
+const divisionButton = document.querySelectorAll('.slider-division__button')
 let currentSlide = 0;
 
 function showSlide(index) {
@@ -21,7 +22,13 @@ function showSlide(index) {
   } else if (index === 2) {
     promo.classList.add('promo--bg3');
   }
+
+  divisionButton.forEach(button => {
+    button.classList.remove('slider-division__button--active');
+  });
+  divisionButton[index].classList.add('slider-division__button--active')
 }
+
 
 function initSlider() {
   // Проверяем ширину экрана
