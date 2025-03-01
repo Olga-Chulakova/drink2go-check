@@ -1,5 +1,4 @@
 const promo = document.querySelector('.promo');
-const promoList = document.querySelector('.promo__list');
 const promoItems = document.querySelectorAll('.promo__item:not(.promo-button)');
 const buttonBack = document.querySelector('.promo-button__slider--back');
 const buttonForward = document.querySelector('.promo-button__slider--forward');

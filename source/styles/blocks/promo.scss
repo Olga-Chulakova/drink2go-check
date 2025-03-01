@@ -48,17 +48,21 @@
 
 .promo__image {
   display: block;
-
-  @media (min-width: $desktop) {
-    margin-left: 65px;
-  }
 }
 
 .promo__wrapper {
   display: grid;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 608px;
+  }
 
   @media (min-width: $desktop) {
-    grid-template-columns: auto 1fr;
+    width: 1255px;
+    padding-left: 25px;
+    grid-template-columns: 600px 625px;
     column-gap: 30px;
   }
 }
