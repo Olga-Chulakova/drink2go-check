@@ -47,7 +47,6 @@
 
   @media (min-width: $desktop) {
     gap: 20px;
-    justify-content: space-between;
   }
 }
 
@@ -109,6 +108,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 20px;
   }
 }
 
@@ -175,8 +178,6 @@
 
   @media (min-width: $tablet) {
     box-sizing: border-box;
-    width: auto;
-    height: 80px;
     padding: 32px 20px;
     align-items: center;
     display: flex;
@@ -196,14 +197,7 @@
   }
 
   @media (min-width: $desktop) {
-    box-sizing: border-box;
-    width: 103px;
-    height: 80px;
-    padding: 32px 20px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
+    padding: 32px 21px;
   }
 }
 

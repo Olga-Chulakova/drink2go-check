@@ -4,6 +4,10 @@
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
+
+  @media (min-width: $desktop) {
+    gap: 20px;
+  }
 }
 
 .user__link {
@@ -51,12 +55,11 @@
   }
 
   @media (min-width: $desktop) {
-    width: 120px;
-    height: 80px;
+    width: auto;
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 32px 20px;
+    padding: 32px 21px;
 
     &:active {
       background-color: $lilac;
@@ -85,7 +88,7 @@
 
 .user__link.user__link--union {
   @media (min-width: $desktop) {
-    width: 129px;
+    width: auto;
   }
 }
 

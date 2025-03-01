@@ -1,8 +1,9 @@
 const promo = document.querySelector('.promo');
+const promoList = document.querySelector('.promo__list');
 const promoItems = document.querySelectorAll('.promo__item:not(.promo-button)');
 const buttonBack = document.querySelector('.promo-button__slider--back');
 const buttonForward = document.querySelector('.promo-button__slider--forward');
-const divisionButton = document.querySelectorAll('.slider-division__button')
+const sliderDivisionButtons = document.querySelectorAll('.slider-division__button');
 let currentSlide = 0;
 
 function showSlide(index) {
@@ -23,12 +24,15 @@ function showSlide(index) {
     promo.classList.add('promo--bg3');
   }
 
-  divisionButton.forEach(button => {
+  // ===== ПОДСВЕТКА КНОПОК-ИНДИКАТОРОВ =====
+  // Удаляем класс активности со всех кнопок
+  sliderDivisionButtons.forEach((button) => {
     button.classList.remove('slider-division__button--active');
   });
-  divisionButton[index].classList.add('slider-division__button--active')
-}
 
+  // Добавляем класс активности к текущей кнопке
+  sliderDivisionButtons[index].classList.add('slider-division__button--active');
+}
 
 function initSlider() {
   // Проверяем ширину экрана
@@ -36,23 +40,19 @@ function initSlider() {
     // Добавляем обработчики событий для кнопок
     buttonBack.addEventListener('click', () => {
       currentSlide--;
-
-      // ===== ИЗМЕНЕНИЕ ДЛЯ ЦИКЛИЧЕСКОЙ ПРОКРУТКИ =====
+      // ===== УБИРАЕМ ЗАЦИКЛИВАНИЕ =====
       if (currentSlide < 0) {
-        currentSlide = promoItems.length - 1; // Переходим к последнему слайду
+        currentSlide = 0; // Останавливаемся на первом слайде
       }
-
       showSlide(currentSlide);
     });
 
     buttonForward.addEventListener('click', () => {
       currentSlide++;
-
-      // ===== ИЗМЕНЕНИЕ ДЛЯ ЦИКЛИЧЕСКОЙ ПРОКРУТКИ =====
+      // ===== УБИРАЕМ ЗАЦИКЛИВАНИЕ =====
       if (currentSlide >= promoItems.length) {
-        currentSlide = 0; // Переходим к первому слайду
+        currentSlide = promoItems.length - 1; // Останавливаемся на последнем слайде
       }
-
       showSlide(currentSlide);
     });
 
